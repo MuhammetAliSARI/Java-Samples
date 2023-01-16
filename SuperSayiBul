@@ -13,9 +13,9 @@ public static void main(String[] args) {
         }
 
         if (sayi==topla){
-            System.out.println(topla + "  bir süper dayıdır");
+            System.out.println(sayi + "  bir süper dayıdır");
         }else{
-            System.out.println("Bu bir süper sayı değildir.");
+            System.out.println(sayi + "  bir süper sayı değildir.");
         }
 
 
