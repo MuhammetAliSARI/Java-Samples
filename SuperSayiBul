@@ -1,0 +1,24 @@
+public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Bir sayı giriniz : ");
+        int sayi = input.nextInt();
+
+        int topla = 0;
+
+        for (int i = 1 ; i<sayi ; i++){
+            if (sayi %  i == 0) {
+                topla = topla + i;
+            }
+
+        }
+
+        if (sayi==topla){
+            System.out.println(topla + "  bir süper dayıdır");
+        }else{
+            System.out.println("Bu bir süper sayı değildir.");
+        }
+
+
+
+
+    }
