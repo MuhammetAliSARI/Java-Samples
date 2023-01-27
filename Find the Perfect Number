@@ -1,5 +1,6 @@
 public static void main(String[] args) {
-// Sıfıra kalansız bölümlerinin toplamı kendini veren sayılara 'Mükemmel Sayı' denir.
+// Find the Perfect Number
+// Mükemmel Sayıyı Bul : Sıfıra kalansız bölümlerinin toplamı kendini veren sayılara 'Mükemmel Sayı' denir.
         Scanner input = new Scanner(System.in);
         System.out.print("Bir sayı giriniz : ");
         int sayi = input.nextInt();
