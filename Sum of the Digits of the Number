@@ -1,4 +1,4 @@
-// Girilen sayının rakamları toplamı
+// Girilen sayının rakamları toplamı...
 // Sum of the Digits of the Number
 
     public static void main(String[] args) {
