@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import static practice.Bilet.slowPrint;
-
 public class Bilet {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -18,10 +16,9 @@ public class Bilet {
         System.out.print("Nereye Gidiyor        : ");
         String nereye = input.nextLine().toLowerCase();          // Küçük-büyük harf girişi problemini burada hallettik.
 
-
         if (nereye.equals("istanbul")){mesafe = 1250;}           //  Seyahat şirketinin otobüs çıkardığı illerin mesafeleri mesafe değişkenine aktarıldı
         else if (nereye.equals("ankara")){mesafe = 800;}         //  Böylelikle gidilen yerin mesafe bilgisi bilet fiyatını belirleyecek.
-        else if (nereye.equals("Izmir")){mesafe = 1650;}
+        else if (nereye.equals("izmir")){mesafe = 1650;}
         else if (nereye.equals("bursa")){mesafe = 1350;}
         else if (nereye.equals("antalya")){mesafe = 1550;}
         else { System.out.println("Bu güzergahta otobüsümüz yoktur...!"); return;}
@@ -49,7 +46,7 @@ public class Bilet {
 
             if (yolculukTipi==2){
                 biletUcreti-=biletUcreti*0.2;
-                System.out.println(biletUcreti*2);
+                System.out.println("Ücretiniz : " + biletUcreti*2);
                 gitgel+=1;
             }else if (yolculukTipi==1){
                 System.out.println("Ücretiniz : " + biletUcreti + " TL");
@@ -58,16 +55,16 @@ public class Bilet {
             System.out.println("\nLütfen geçerli bir bilgi girin..!");
         }
 
-        System.out.println("Sn. "+ ad);
-        System.out.println(aracPlaka + " plakalı otobüsümüzle");
-        System.out.println(nereye + " istikametine yapacağınız seyahatte");
-        slowPrint("KEYİFLİ YOLCULUKLAR DİLERİZ.....",50);
+        System.out.println("\nSn. "+ ad);
+        System.out.println(aracPlaka.toUpperCase() + " plakalı otobüsümüzle");
+        System.out.println(nereye.toUpperCase() + " istikametine yapacağınız seyahatte");
+        System.out.println("KEYİFLİ YOLCULUKLAR DİLERİZ.....");
 
         if (yas12Indirim2>0){System.out.print("\n 65 Yaş indirimden faydalandınız : %30");
         } else if (yas24Indirim1>0){
             System.out.print("\n 24 Yaş indirimden faydalandınız : %10");
         } else if (yas65Indirim3>0){
-            System.out.print("\n 65 Yaş indirimden faydalandınız : %30");
+            System.out.print("\n65 Yaş indirimden faydalandınız : %30");
         }
         if (gitgel>0){System.out.print("\nGidiş-Dönüş indirim oranınız : %20");}
     }
