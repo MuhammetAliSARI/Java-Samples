@@ -46,10 +46,11 @@ public class Bilet {
 
             if (yolculukTipi==2){
                 biletUcreti-=biletUcreti*0.2;
-                System.out.println("Ücretiniz : " + biletUcreti*2);
+                System.out.println("Ücretiniz : " + (String.format("%.2f", biletUcreti*2) + " TL"));
+                //
                 gitgel+=1;
             }else if (yolculukTipi==1){
-                System.out.println("Ücretiniz : " + biletUcreti + " TL");
+                System.out.println("Ücretiniz : " + (String.format("%.2f", biletUcreti) + " TL"));
                             }
         }else {
             System.out.println("\nLütfen geçerli bir bilgi girin..!");
@@ -60,11 +61,11 @@ public class Bilet {
         System.out.println(nereye.toUpperCase() + " istikametine yapacağınız seyahatte");
         System.out.println("KEYİFLİ YOLCULUKLAR DİLERİZ.....");
 
-        if (yas12Indirim2>0){System.out.print("\n 65 Yaş indirimden faydalandınız : %30");
+        if (yas12Indirim2>0){System.out.print("\n12 Yaş altı indirimden faydalandınız : %30");
         } else if (yas24Indirim1>0){
-            System.out.print("\n 24 Yaş indirimden faydalandınız : %10");
+            System.out.print("\n24 Yaş altı indirimden faydalandınız : %10");
         } else if (yas65Indirim3>0){
-            System.out.print("\n65 Yaş indirimden faydalandınız : %30");
+            System.out.print("\n65 Yaş altı indirimden faydalandınız : %30");
         }
         if (gitgel>0){System.out.print("\nGidiş-Dönüş indirim oranınız : %20");}
     }
