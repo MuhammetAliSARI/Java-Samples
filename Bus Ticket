@@ -1,0 +1,63 @@
+public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int km = 0;
+        int yas = 0;
+        int yolculukTipi = 1;
+
+        System.out.print("Müşteri Adı           : ");
+        String ad = input.nextLine();
+
+        System.out.print("Araç Plakası          : ");
+        String aracPlaka = input.nextLine();
+
+        System.out.print("Nereye Gidiyor        : ");
+        String nereye = input.nextLine();
+
+        System.out.print("Gidilecek mesafe (km) : ");
+        km = input.nextInt();
+
+        System.out.print("Yaş                   : ");
+        yas = input.nextInt();
+
+        System.out.print("Sadece Gidiş için: 1   Gidiş-Dönüş için : 2" + "\nYolculuk tipi         : ");
+        yolculukTipi = input.nextInt();
+
+        int yas24Indirim1 = 0;
+        int yas12Indirim2 = 0;
+        int yas65Indirim3 = 0;
+        int gitgel = 0;
+
+        if (km>0 && yas>0 &&(yolculukTipi==1 || yolculukTipi==2)){
+            double biletUcreti = km*0.10;
+            double yasIndirimOrani = 0;
+
+            if (yas<24){ yasIndirimOrani = 0.1; yas24Indirim1+=1;}
+            if (yas<12){ yasIndirimOrani = 0.5; yas12Indirim2+=1;}
+            if (yas>65){ yasIndirimOrani = 0.3; yas65Indirim3+=1;}
+
+            biletUcreti -= biletUcreti*yasIndirimOrani;     // Biletin fiyatından, bilet fiyaının yaş indirimiyle çarpımının eksiltilmiş hali
+
+            if (yolculukTipi==2){
+                biletUcreti-=biletUcreti*0.2;
+                System.out.println(biletUcreti*2);
+                gitgel+=1;
+            }else if (yolculukTipi==1){
+                System.out.println("Ücretiniz : " + biletUcreti + " TL");
+                            }
+        }else {
+            System.out.println("\nLütfen geçerli bir bilgi girin..!");
+        }
+
+        System.out.println("Sn. "+ ad);
+        System.out.println(aracPlaka + " plakalı otobüsümüzle");
+        System.out.println(nereye + " istikametine yapacağınız seyahatte");
+        slowPrint("KEYİFLİ YOLCULUKLAR DİLERİZ.....",50);
+
+        if (yas12Indirim2>0){System.out.print("\n 65 Yaş indirimden faydalandınız : %30");
+        } else if (yas24Indirim1>0){
+            System.out.print("\n 24 Yaş indirimden faydalandınız : %10");
+        } else if (yas65Indirim3>0){
+            System.out.print("\n 65 Yaş indirimden faydalandınız : %30");
+        }
+        if (gitgel>0){System.out.print("\n Gidiş-Dönüş indirim oranınız : %20");}
+    }
