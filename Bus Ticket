@@ -1,6 +1,11 @@
-public static void main(String[] args) {
+import java.util.Scanner;
+
+import static practice.Bilet.slowPrint;
+
+public class Bilet {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int km = 0;
+        int mesafe = 0;
         int yas = 0;
         int yolculukTipi = 1;
 
@@ -11,10 +16,15 @@ public static void main(String[] args) {
         String aracPlaka = input.nextLine();
 
         System.out.print("Nereye Gidiyor        : ");
-        String nereye = input.nextLine();
+        String nereye = input.nextLine().toLowerCase();          // Küçük-büyük harf girişi problemini burada hallettik.
 
-        System.out.print("Gidilecek mesafe (km) : ");
-        km = input.nextInt();
+
+        if (nereye.equals("istanbul")){mesafe = 1250;}           //  Seyahat şirketinin otobüs çıkardığı illerin mesafeleri mesafe değişkenine aktarıldı
+        else if (nereye.equals("ankara")){mesafe = 800;}         //  Böylelikle gidilen yerin mesafe bilgisi bilet fiyatını belirleyecek.
+        else if (nereye.equals("Izmir")){mesafe = 1650;}
+        else if (nereye.equals("bursa")){mesafe = 1350;}
+        else if (nereye.equals("antalya")){mesafe = 1550;}
+        else { System.out.println("Bu güzergahta otobüsümüz yoktur...!"); return;}
 
         System.out.print("Yaş                   : ");
         yas = input.nextInt();
@@ -27,8 +37,8 @@ public static void main(String[] args) {
         int yas65Indirim3 = 0;
         int gitgel = 0;
 
-        if (km>0 && yas>0 &&(yolculukTipi==1 || yolculukTipi==2)){
-            double biletUcreti = km*0.10;
+        if (mesafe>0 && yas>0 &&(yolculukTipi==1 || yolculukTipi==2)){
+            double biletUcreti = mesafe*0.10;
             double yasIndirimOrani = 0;
 
             if (yas<24){ yasIndirimOrani = 0.1; yas24Indirim1+=1;}
@@ -59,5 +69,6 @@ public static void main(String[] args) {
         } else if (yas65Indirim3>0){
             System.out.print("\n 65 Yaş indirimden faydalandınız : %30");
         }
-        if (gitgel>0){System.out.print("\n Gidiş-Dönüş indirim oranınız : %20");}
+        if (gitgel>0){System.out.print("\nGidiş-Dönüş indirim oranınız : %20");}
     }
+}
