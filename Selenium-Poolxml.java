@@ -9,6 +9,5 @@ public class C01_Selenium {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com/");
-
     }
 }
