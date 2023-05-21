@@ -19,4 +19,4 @@ public class KlasorOlustur {
     }
 }
 
-// Hazırlayan : Emre Demirtekin
+// Hazırlayan : Emre Demirtekin 
