@@ -1,0 +1,32 @@
+package horonaga.Metodhs.Array;
+
+import java.util.Arrays;
+
+public class Array {
+    public static void main(String[] args) {
+
+
+
+        String stdNames[] = new String[5];
+
+
+
+        stdNames[2] = "Ajda";
+        stdNames[0] = "Cuneyt";
+        stdNames[1] = "Kemal";
+        stdNames[3] = "Ezel";
+        stdNames[4] = "Besir";
+        System.out.println(Arrays.toString(stdNames));  // array verilerini yan yana yazdırır.
+
+
+        System.out.println("İstenen index değeri : " + stdNames[2]);                // 2. indexi yazdırır.
+
+
+        for(int i=0; i< stdNames.length; i++){          // array verilerini alt alta yazdırır.
+            System.out.println(stdNames[i] + "!");
+        }
+        for(int k=stdNames.length; k< stdNames.length; k++) { // BU KISIM NEDEN YAZDIRILMIYOR????????????????
+            System.out.println(stdNames[k]);
+        }
+    }
+}
