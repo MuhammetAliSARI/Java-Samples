@@ -1,6 +1,6 @@
 package horonaga;
 
-public class MeitndenHarfAl {
+public class MetindenHarfAl {
     public static void main(String[] args) {
         String metin = "Bu bir metindir.";
 
