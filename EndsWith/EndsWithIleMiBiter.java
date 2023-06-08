@@ -6,6 +6,5 @@ public class EndsWithIleMiBiter {
 
         boolean ileMiBiter = s.endsWith("vole");  //endWith metodu ile bitişi kontrol edeceğiz.
         System.out.println(ileMiBiter);
-
     }
 }
